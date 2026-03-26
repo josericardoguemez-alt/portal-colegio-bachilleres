@@ -1,0 +1,358 @@
+<?php
+?>
+
+<!Doctype hmtl>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Organismos: Estructuras y procesos, herencia y evolución biológica</title>
+        <script>alert("Esta página tiene como función informar sobre elementos relacionados a la biología, curiosidades e impartir el conocimiento necesario de la materia, todo el material recabado es parte de un proyecto realizado a base un programa escolar elaborado y no tiene ninguna relación con otras páginas en internet ATT. Ricardo G.P. :D")</script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </head>
+    <body id="seccion-inicio"> 
+         
+<header data-bs-theme="dark"> <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> <div class="container-fluid"> <a class="navbar-brand" href="">Organismos y Estructuras</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarCollapse"> <ul class="navbar-nav me-auto mb-2 mb-md-0">
+  <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#seccion-inicio">Inicio</a> </li>
+ <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Artículos</a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" href="#seccion-celulas">Las Células: Sus tipos y sus diferencias</a></li>
+    <li><a class="dropdown-item" href="#seccion-estructura">Estructura Celular: Componentes de las células</a></li>
+    <li><a class="dropdown-item" href="#seccion-caracteristicas">Una forma de vida: Características de los seres vivos</a></li>
+    <li><hr class="dropdown-divider"></li> <li><a class="dropdown-item" href="#todos-articulos">Ver todos</a></li>
+  </ul>
+</li>
+  <li class="nav-item"> <a class="nav-link" href="#seccion-contacto">Datos de Contacto</a> </li> 
+</ul> <form class="d-flex" role="search"> <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success" type="submit">Search</button> </form> </div> </div> </nav> </header> 
+
+<form class="d-flex" role="search" id="formBuscador">
+  <input class="form-control me-2" type="search" id="inputBuscador" placeholder="¿Qué buscas?" aria-label="Search">
+  <button class="btn btn-outline-success" id="botonBuscar" type="submit">Buscar</button>
+</form>
+
+<script>
+document.getElementById('formBuscador').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita que la página se recargue
+    
+    let textoBusqueda = document.getElementById('inputBuscador').value.toLowerCase();
+    let contenido = document.body.innerText.toLowerCase();
+    
+    // Lista de IDs de tus secciones para que el buscador sepa a dónde saltar
+    const secciones = {
+        "célula": "seccion-celulas",
+        "animal": "seccion-celulas",
+        "vegetal": "seccion-celulas",
+        "estructura": "seccion-estructura",
+        "organización": "seccion-caracteristicas",
+        "metabolismo": "seccion-caracteristicas",
+        "homeostasis": "seccion-caracteristicas",
+        "adaptación": "seccion-caracteristicas",
+        "contacto": "seccion-contacto"
+    };
+
+    // Lógica de búsqueda simple
+    let encontrado = false;
+    for (let clave in secciones) {
+        if (textoBusqueda.includes(clave)) {
+            let elemento = document.getElementById(secciones[clave]);
+            if (elemento) {
+                elemento.scrollIntoView({ behavior: 'smooth' });
+                encontrado = true;
+                break;
+            }
+        }
+    }
+
+    if (!encontrado) {
+        alert("No se encontró una sección específica para: " + textoBusqueda + ". ¡Prueba con 'célula' o 'metabolismo'!");
+    }
+});
+</script>
+
+<main> <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel"> <div class="carousel-indicators"> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button> <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button> </div> <div class="carousel-inner"> <div class="carousel-item active carousel-item-start"> <img src="https://www.edv.uchile.cl/wp-content/uploads/2021/03/partes-celulas-large.jpg" class="d-block w-100" alt="Descripción de la imagen" style="object-fit: cover; height: 100vh;"> <div class="container"> <div class="carousel-caption text-start"> <h1>Las Células: Sus tipos y sus diferencias</h1> <p class="opacity-75">Las células son la parte fundamental que conforma a los seres vivos e identificarlo como un factor de gran importancia en la vida, implica conocer sus tipos (Procariota y Eucariota) y diferencias, para tener una base solida de conocimientos que servira para establecer las bases de la estructuración general, si quieres conocer más de este tema visita el siguiente artículo.</p> <p><a class="btn btn-lg btn-primary" href="#seccion-celulas">Ir al artículo</a></p> </div> </div> </div> <div class="carousel-item carousel-item-next carousel-item-start"> <img src="https://concepto.de/wp-content/uploads/2018/08/celula-animal-e1534250845115.jpg" class="d-block w-100" alt="Descripción de la imagen" style="object-fit: cover; height: 100vh;"> <div class="container"> <div class="carousel-caption"> <h1>Estructura Celular: Componentes de las células</h1> <p>Los componentes de una célula son fundamentales para el funcionamiento de los procesos celulares, por ello es necesario conocerlos, asi como su relación constante para evitar fallos en sus procesos que puedan conllevar una afectación del organismo, para obtener más información consulta el enlace.</p> <p><a class="btn btn-lg btn-primary" href="#seccion-estructura">Leer el artículo</a></p> </div> </div> </div> <div class="carousel-item"> <img src="https://i.pinimg.com/736x/7a/9c/ef/7a9ceff9feada987ef49ec14ca76dc04.jpg" class="d-block w-100" alt="Descripción de la imagen" style="object-fit: cover; height: 100vh;"> <div class="container"> <div class="carousel-caption text-end"> <h1>Una forma de vida: Características de los seres vivos</h1> <p>Los procesos que lleva a cabo el organismo son fascinantes tanto por reacción ante un suceso como en funciones vitales para el cuerpo en general, así que puedes conocer más detalles sobre estas actividades siguiendo esta página.</p> <p><a class="btn btn-lg btn-primary" href="#seccion-caracteristicas">Visitar el artículo</a></p> </div> </div> </div> </div> <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button> </div> 
+  <hr>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://www.aprendemas.com/co/blog/images/2023/02/biologia_carreras.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Introducción</h5>
+        <p class="card-text">Por más que observemos nuestro alrededor siempre habrá algo que nunca podamos notar, pues en el mundo existen diversos organismos diminutos dificiles e incluso imposibles de admirar, es por está razón que la rama de ciencia "la biología" nos ayuda entender la composición general de este mundo cosas que no conocemos y que al descubrir podamos tener curiosidad y descubrir más allá de lo que nos rodea, conozcamos este mundo juntos a través de esta página.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">-José Ricardo Güemez Poot</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://www.shutterstock.com/image-illustration/probiotics-bacteria-biology-science-microscopic-600nw-2548646011.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Objetivo</h5>
+        <p class="card-text">Lo que busca esta página es fomentar el aprendizaje de los conocimientos relacionados a la investigación de los seres vivos, sus estructuras, procesos y como están estrechamente relacionados con el ecosistema, de igual manera se busca comprender como se conforma cada ser vivo desde las células hasta el desarrollo de tejidos y posteriormente los organos que seran parte del cuerpo que a su vez estará dentro de una sociedad que vive en un entorno lleno de diversidad.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">-José Ricardo Güemez Poot</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://examtimeassets.s3.amazonaws.com/uploads/media/image/20198082/desktop_33cbe10b-20f4-4aef-b16b-bd434ff79f0c.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Hipótesis</h5>
+        <p class="card-text">Después de conocer más sobre esta página comprenderas la importancia que conllevan las células en la conformación de seres vivos, también sobre la formación de los organismos en general dandote una herramienta positiva para observar de manera distinta el entorno que nos rodea y puedas conocer de manera profunda la manera en que nos desarrollamos de manera individual y colectiva comprendiendo que la unidad fundamental es la célula, por la que la materia no se crea ni se destruye solo se transforma.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">-José Ricardo Güemez Poot</small>
+      </div>
+    </div>
+  </div>
+</div> 
+   <hr class="featurette-divider" id="seccion-artículos"> <div class="row featurette" id="seccion-celulas"> <div class="col-md-7"> <h2 class="featurette-heading fw-normal lh-1">Las Células: <span class="text-body-secondary">Sus tipos y sus diferencias</span></h2> <p class="lead">La célula es la unidad fundamental de todos los seres vivos, existiendo millones de tipos de células con morfología y funciones distintas, todos los organismos las contienen sin excepción, de manera unicelular (Bacterias y protistas) o pluricelular (plantas, hongos y animales) a partir de una expresión genética. Exiten dos tipos de celulas generales:</p>
+  <h2>Célula Procariota</h2>
+  <p class="lead">Es la célula que no posee un núcleo definido pero tiene un región llamada nucleoide, en la cual se encuentra el ADN, acomodado en forma circular, son los organismos como las bacterias que se reproducen asexualmente por fisión binaria.</p>
+  <h2>Célula Eucariota</h2>
+  <p class="lead">Es la célula que sí posee un núcleo definido donde se encuentra su material genético, se cree que proviene de la evolución de la célula procariota, son los organismos como los animales, las plantas y algunos protistas.</p>
+  </div> <div class="col-md-5"> <img src="https://cursoparalaunam.com/wp-content/uploads/2019/02/LAS-CELULAS-PROCARIOTAS-Y-LAS-CELULAS-EUCARIOTAS.jpg" 
+     class="img-fluid mx-auto d-block shadow-lg rounded" 
+     alt="Comparación célula procariota y eucariota" 
+     width="500" 
+     height="500" 
+     style="object-fit: cover;"> </div> </div> 
+     <hr class="featurette-divider"> <div class="row featurette" id="seccion-estructura"> <div class="col-md-7 order-md-2"> <h2 class="featurette-heading fw-normal lh-1">Estructura Celular: <span class="text-body-secondary">Componentes de las células</span></h2> <p class="lead">Las células llevan una estructura muy similar pero distinta en cuanto al núcleo por ello es necesario conocer más a fondo que la célula eucariota se subdivide en dos partes más cada uno con una estructura con organelos parecidos pero en cierta parte distinta, las cuales son:</p>
+    <h2>Célula Animal</h2>
+    <p class="lead">La célula animal es la unidad fundamental de la vida en organismos del reino animal, se caracteriza por su forma irregular y su flexibilidad, careciendo de pared celular rígida, posee un núcleo bien definido que alberga el material genético, y un citoesqueleto que le da soporte, su metabolismo depende enteramente de la ingestión de nutrientes de otros organismos.</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAnimal">
+  Componentes de la célula animal
+</button>
+<div class="modal fade" id="modalAnimal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Partes de la Célula Animal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li><strong>Núcleo:</strong> Contiene el ADN.</li>
+          <li><strong>Mitocondrias:</strong> Generan energía (ATP).</li>
+          <li><strong>Ribosomas:</strong> Sintetizan proteínas.</li>
+          <li><strong>Citoplasma:</strong> Gel donde flotan los organelos.</li>
+          <li><strong>Membrana Plasmática:</strong> Protege la célula.</li>
+          <li><strong>Centriolos:</strong> Ayudan en la división celular.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<h2>Célula Vegetal</h2>
+    <p class="lead">La célula vegetal es la base estructural de plantas, algas y otros organismos fotosintéticos, su rasgo más distintivo es la presencia de una robusta pared celular de celulosa, que le otorga una forma fija y una gran rigidez, proveyéndola de soporte estructural, estas células contienen cloroplastos encargados de la fotosíntesis, el proceso mediante el cual transforman la luz solar en energía.</p>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalVegetal">
+  Componentes de la célula vegetal
+</button>
+<div class="modal fade" id="modalVegetal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">Partes de la Célula Vegetal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li><strong>Pared Celular:</strong> Brinda rigidez y soporte.</li>
+          <li><strong>Cloroplastos:</strong> Realizan la fotosíntesis.</li>
+          <li><strong>Vacuola:</strong> Almacena agua y nutrientes.</li>
+          <li><strong>Núcleo:</strong> Centro de control genético.</li>
+          <li><strong>Aparato de Golgi:</strong> Procesa proteínas.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+  </div> <div class="col-md-5 order-md-1"> <img src="https://cdn0.ecologiaverde.com/es/posts/3/3/5/semejanzas_entre_celula_animal_y_vegetal_1533_1_600.jpg" 
+     class="img-fluid mx-auto d-block shadow-lg rounded" 
+     alt="Comparación célula animal y vegetal" 
+     width="500" 
+     height="500" 
+     style="object-fit: cover;"> 
+    </div> 
+  </div>
+    
+    </div> </div> <hr class="featurette-divider"> <div class="row featurette" id="seccion-caracteristicas"> <div class="col-md-7"> <h2 class="featurette-heading fw-normal lh-1">Una forma de vida:</h2> 
+<section id="seccion-caracteristicas" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <h2 class="display-5 fw-bold" style="color: #001f3f;">Características de los seres vivos</h2>
+      <p class="lead">Las 8 funciones que definen a todo organismo vivo.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">🧬</div>
+            <h5 class="fw-bold">Organización</h5>
+            <p class="small text-muted">Desde células hasta sistemas complejos de órganos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">🔥</div>
+            <h5 class="fw-bold">Metabolismo</h5>
+            <p class="small text-muted">Conversión de nutrientes en energía química (ATP).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">⚖️</div>
+            <h5 class="fw-bold">Homeostasis</h5>
+            <p class="small text-muted">Mantenimiento del equilibrio interno del cuerpo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">📈</div>
+            <h5 class="fw-bold">Crecimiento</h5>
+            <p class="small text-muted">Aumento de tamaño o del número de células.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">🐣</div>
+            <h5 class="fw-bold">Reproducción</h5>
+            <p class="small text-muted">Capacidad de producir descendencia (sexual o asexual).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">⚡</div>
+            <h5 class="fw-bold">Irritabilidad</h5>
+            <p class="small text-muted">Reacción ante estímulos del medio ambiente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm custom-card">
+          <div class="card-body text-center">
+            <div class="icon-box">🌍</div>
+            <h5 class="fw-bold">Evolución</h5>
+            <p class="small text-muted">Adaptación de las especies a lo largo del tiempo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+  <div class="card h-100 shadow-sm custom-card">
+    <div class="card-body text-center">
+      <div class="icon-box">🌵</div>
+      <h5 class="fw-bold">Adaptación</h5>
+      <p class="small text-muted">Capacidad de ajustarse a los cambios del entorno para sobrevivir.</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section id="seccion-contacto" class="py-5 text-white w-100 m-0" style="background-color: #001f3f; border-top: 5px solid #00d4ff;">
+
+  <div class="container-fluid px-md-5">
+    <div class="row gy-5 justify-content-between">
+      
+      <div class="col-md-12 col-lg-4 text-center text-lg-start">
+        <h3 class="fw-bold mb-3 display-6">Organimos y Estructuras</h3>
+        <p class="text-white-50">Dedique gran parte de mi tiempo en realizar esta página fue un trabajo algo agotador y nocturno pero espero que lo disfrutes ¡Gracias por visitarnos!</p>
+        <div class="d-flex justify-content-center justify-content-lg-start gap-3 fs-3 mt-4">
+          <a href="#" class="text-white hvr-grow"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white hvr-grow"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white hvr-grow"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-white hvr-grow"><i class="bi bi-youtube"></i>Youtube: https://youtube.com/@thescientistsprotagonists?si=eIKLmJKZa7GotJBV</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h5 class="fw-bold mb-4 text-uppercase small" style="letter-spacing: 2px;">Explorar</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#seccion-inicio" class="text-white-50 text-decoration-none">Inicio</a></li>
+          <li class="mb-2"><a href="#seccion-celulas" class="text-white-50 text-decoration-none">Células</a></li>
+          <li class="mb-2"><a href="#seccion-estructura" class="text-white-50 text-decoration-none">Estructura</a></li>
+          <li class="mb-2"><a href="#seccion-caracteristicas" class="text-white-50 text-decoration-none">Características</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-4">
+        <h5 class="fw-bold mb-4 text-uppercase small" style="letter-spacing: 2px;">Datos de Contacto Directo</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3 d-flex align-items-start">
+            <i class="bi bi-envelope-fill me-3 text-info"></i>
+            <div>
+              <span class="d-block fw-bold text-white">Email</span>
+              <a href="mailto:tu-correo@ejemplo.com" class="text-white-50 text-decoration-none">jricardogpoot@gmail.com</a>
+            </div>
+          </li>
+          <li class="mb-3 d-flex align-items-start">
+            <i class="bi bi-geo-alt-fill me-3 text-info"></i>
+            <div>
+              <span class="d-block fw-bold text-white">Ubicación</span>
+              <span class="text-white-50">Cancún Quintana Roo, México</span>
+            </div>
+          </li>
+          <li class="d-flex align-items-start">
+            <i class="bi bi-telephone-fill me-3 text-info"></i>
+            <div>
+              <span class="d-block fw-bold text-white">Teléfono</span>
+              <span class="text-white-50">+52 998 346 0453</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="my-5 opacity-25">
+  </div>
+</section>
+
+<style>
+  body {
+    overflow-x: hidden; /* Evita el scroll horizontal */
+  }
+  .hvr-grow {
+    transition: transform 0.2s;
+  }
+  .hvr-grow:hover {
+    transform: scale(1.2);
+    color: #00d4ff !important;
+  }
+</style>
+
+  </div>
+  </div> </div> <hr class="featurette-divider"> <!-- /END THE FEATURETTES --> </div><!-- /.container --> <!-- FOOTER --> <footer class="container"> <p class="float-end"><a href="#">Regresar al inicio</a></p> <p>© 2023–2026 Colegio de Bachilleres Plantel Cancún Dos · <a href="#">Privacidad</a> · <a href="#">Terminos</a></p> </footer> </main>   <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" class="astro-vvvwv3sm"></script>   
+</body> 
+</html>
